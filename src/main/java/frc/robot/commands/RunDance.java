@@ -29,8 +29,6 @@ public class RunDance extends CommandBase {
         addRequirements(drivetrain);
         dance.init();
         timer.start();
-
-
     }
 
     // Called when the command is initially scheduled.
