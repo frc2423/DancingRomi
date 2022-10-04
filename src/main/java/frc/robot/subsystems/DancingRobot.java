@@ -40,4 +40,12 @@ public class DancingRobot {
     public static int numSteps() {
         return DancingRobot.steps.size();
     }
+
+    public static void Forward(double seconds, double forwardspeed) {
+        DancingRobot.AddStep(new StepInfo(seconds, forwardspeed, 0));
+    }
+
+    public static void Backward(double seconds, double backwardspeed) {
+        DancingRobot.AddStep(new StepInfo(seconds, backwardspeed, 0));
+    }
 }
