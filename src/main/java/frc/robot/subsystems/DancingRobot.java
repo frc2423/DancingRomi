@@ -25,6 +25,17 @@ public class DancingRobot {
         DancingRobot.AddStep(new StepInfo(seconds, -0.5, 0));
     }
 
+    public static void Square(double seconds) {
+        DancingRobot.AddStep(new StepInfo(seconds, 0, 0.6));
+        DancingRobot.AddStep(new StepInfo(seconds, 0.405, 0));
+        DancingRobot.AddStep(new StepInfo(seconds, 0, 0.6));
+        DancingRobot.AddStep(new StepInfo(seconds, 0.405, 0));
+        DancingRobot.AddStep(new StepInfo(seconds, 0, 0.6));
+        DancingRobot.AddStep(new StepInfo(seconds, 0.405, 0));
+        DancingRobot.AddStep(new StepInfo(seconds, 0, 0.6));
+        DancingRobot.AddStep(new StepInfo(seconds, 0.405, 0));
+    }
+
     public static void Pause(double seconds) {
         DancingRobot.AddStep(new StepInfo(seconds, 0, 0));
     }
