@@ -53,10 +53,20 @@ public class DancingRobot {
     }
 
     public static void Forward(double seconds, double forwardspeed) {
-        DancingRobot.AddStep(new StepInfo(seconds, forwardspeed, 0));
+        DancingRobot.AddStep(new StepInfo(seconds, 0, forwardspeed));
     }
 
     public static void Backward(double seconds, double backwardspeed) {
-        DancingRobot.AddStep(new StepInfo(seconds, backwardspeed, 0));
+        DancingRobot.AddStep(new StepInfo(seconds, 0, backwardspeed));
     }
+    public static void MessyTriangle(double seconds, double speed) {
+        DancingRobot.Forward(seconds, speed);
+        DancingRobot.SpinClockwise(seconds);
+        DancingRobot.Backward(seconds, speed);
+        DancingRobot.SpinCounterClockwise(seconds);
+        DancingRobot.Forward(seconds, speed);
+        DancingRobot.SpinClockwise(seconds);
+    }
+
+    
 }
