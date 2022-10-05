@@ -7,7 +7,7 @@ public class StepInfo {
     private double speed;
     private double turn;
 
-    public StepInfo(double duration, double turn, double speed) {
+    public StepInfo(double duration, double speed, double turn) {
         this.duration = duration;
         this.speed = speed;
         this.turn = turn;

@@ -36,6 +36,11 @@ public class DancingRobot {
         DancingRobot.AddStep(new StepInfo(seconds, 0.405, 0));
     }
 
+    public static void Circle(double seconds) {
+        DancingRobot.AddStep(new StepInfo(seconds, 0.6, 0.6));
+    }
+    // When the turn speed is the same as the motor speed, only one wheel turns
+
     public static void Pause(double seconds) {
         DancingRobot.AddStep(new StepInfo(seconds, 0, 0));
     }
