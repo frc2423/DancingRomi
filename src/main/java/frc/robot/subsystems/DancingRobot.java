@@ -24,6 +24,10 @@ public class DancingRobot {
     public static void SpinCounterClockwise(double seconds) {
         DancingRobot.AddStep(new StepInfo(seconds, -0.5, 0));
     }
+    
+    public static void SpinCounterClockwise(double seconds, double turnspeed) {
+            DancingRobot.AddStep(new StepInfo(seconds, turnspeed, 0));
+    }
 
     public static void Square(double seconds) {
         DancingRobot.AddStep(new StepInfo(seconds, 0, 0.6));
