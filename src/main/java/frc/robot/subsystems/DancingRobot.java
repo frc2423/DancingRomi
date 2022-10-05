@@ -25,6 +25,10 @@ public class DancingRobot {
         DancingRobot.AddStep(new StepInfo(seconds, -0.5, 0));
     }
 
+    public static void SpinCounterClockwise(double seconds, double turnSpeed) {
+        DancingRobot.AddStep(new StepInfo(seconds, turnSpeed, 0));
+    }
+
     public static void Square(double seconds) {
         DancingRobot.AddStep(new StepInfo(seconds, 0, 0.6));
         DancingRobot.AddStep(new StepInfo(seconds, 0.405, 0));
@@ -36,10 +40,21 @@ public class DancingRobot {
         DancingRobot.AddStep(new StepInfo(seconds, 0.405, 0));
     }
 
-    public static void Circle(double seconds) {
+    public static void ClockwiseCircle(double seconds) {
         DancingRobot.AddStep(new StepInfo(seconds, 0.6, 0.6));
     }
     // When the turn speed is the same as the motor speed, only one wheel turns
+
+    public static void CounterClockwiseCircle(double seconds) {
+        DancingRobot.AddStep(new StepInfo(seconds, -0.6, -0.6));
+    }
+
+    public static void ChaCha(double seconds) {
+        DancingRobot.ClockwiseCircle(0.25);
+        DancingRobot.CounterClockwiseCircle(0.5);
+        DancingRobot.ClockwiseCircle(0.5);
+        DancingRobot.CounterClockwiseCircle(0.5);
+    }
 
     public static void Pause(double seconds) {
         DancingRobot.AddStep(new StepInfo(seconds, 0, 0));
